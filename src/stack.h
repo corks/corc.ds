@@ -1,8 +1,8 @@
 #ifndef LIBCAERUS_STACK_H
 #define LIBCAERUS_STACK_H
 
-#include <stdbool.h>
 #include <stdlib.h>
+#include "bool.h"
 
 typedef struct Stack
 {
