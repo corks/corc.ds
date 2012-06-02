@@ -42,15 +42,3 @@ libcaerus_stack_pop(Stack *s)
 
     return s->content[s->top--];
 }
-
-void
-libcaerus_stack_pop_all(Stack *s)
-{
-    void *t;
-
-    if (s->top == 0)
-        return;
-
-    t = s->content[s->top--];
-    libcaerus_stack_pop_all(s);
-}
