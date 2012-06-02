@@ -1,7 +1,7 @@
 #include "stack.h"
 
 Stack *
-libcaerus_stack_create(const int size)
+stack_create(const int size)
 {
     Stack *s;
 
@@ -18,14 +18,14 @@ libcaerus_stack_create(const int size)
 }
 
 void
-libcaerus_stack_destroy(Stack *s)
+stack_destroy(Stack *s)
 {
     free(s->content);
     free(s);
 }
 
 bool
-libcaerus_stack_push(Stack *s, void *entity)
+stack_push(Stack *s, void *entity)
 {
     if (s->top == s->size)
         return false;
@@ -35,7 +35,7 @@ libcaerus_stack_push(Stack *s, void *entity)
 }
 
 void *
-libcaerus_stack_pop(Stack *s)
+stack_pop(Stack *s)
 {
     if (s->top == 0)
         return NULL;

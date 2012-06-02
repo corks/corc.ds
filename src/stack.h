@@ -10,9 +10,9 @@ typedef struct Stack
     void **content;
 } Stack;
 
-Stack *libcaerus_stack_create(const int size);
-void libcaerus_stack_destroy(Stack *s);
-bool libcaerus_stack_push(Stack *s, void *entity);
-void *libcaerus_stack_pop(Stack *s); 
+Stack *stack_create(const int size);
+void stack_destroy(Stack *s);
+bool stack_push(Stack *s, void *entity);
+void *stack_pop(Stack *s); 
 
 #endif

@@ -2,7 +2,7 @@
 #define LIBCAERUS_BOOL_H
 
 #if (__STDC_VERSION__ < 199901L)
-    typedef enum libcaerus_boolean_
+    typedef enum bool
     {
         false,
         true
