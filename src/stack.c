@@ -5,6 +5,9 @@ stack_create(const int size)
 {
     Stack *s;
 
+    if ((size <= 0) || (size > 66356))
+        return NULL;
+
     if ((s = malloc(sizeof(Stack))) == NULL)
         return NULL;
 
