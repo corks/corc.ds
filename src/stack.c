@@ -25,12 +25,12 @@ libcaerus_stack_destroy(Stack *s)
 }
 
 bool
-libcaerus_stack_push(Stack *s, void *abstract)
+libcaerus_stack_push(Stack *s, void *entity)
 {
     if (s->top == s->size)
         return false;
 
-    s->content[s->top++] = abstract;
+    s->content[s->top++] = entity;
     return true;
 }
 
