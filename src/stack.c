@@ -20,6 +20,7 @@ stack_create(const int size)
 void
 stack_destroy(Stack *s)
 {
+    free(s->content);
     free(s);
 }
 
