@@ -1,7 +1,7 @@
 #ifndef LIBCAERUS_LIST_H
 #define LIBCAERUS_LIST_H
 
-#include "bool.h"
+#include <stdbool.h>
 
 typedef struct ListElement
 {

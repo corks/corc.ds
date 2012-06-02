@@ -2,7 +2,7 @@
 #define LIBCAERUS_STACK_H
 
 #include <stdlib.h>
-#include "bool.h"
+#include <stdbool.h>
 
 typedef struct Stack
 {
