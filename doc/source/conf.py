@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # libcaerus documentation build configuration file, created by
-# sphinx-quickstart on Sat Jun  2 08:22:39 2012.
+# sphinx-quickstart on Sat Jun  2 08:47:14 2012.
 #
 # This file is execfile()d with the current directory set to its containing dir.
 #
@@ -25,7 +25,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.pngmath']
+extensions = ['sphinx.ext.todo', 'sphinx.ext.pngmath']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = [' templates']

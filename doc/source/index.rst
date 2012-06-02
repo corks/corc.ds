@@ -1,5 +1,5 @@
 .. libcaerus documentation master file, created by
-   sphinx-quickstart on Sat Jun  2 08:22:39 2012.
+   sphinx-quickstart on Sat Jun  2 08:47:14 2012.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
