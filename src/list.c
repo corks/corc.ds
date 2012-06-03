@@ -46,4 +46,6 @@ libcaerus_list_tail(CaerusList *l)
 
 bool
 libcaerus_list_empty(CaerusList *l)
-{ }
+{
+    return (l->size == 0);
+}
