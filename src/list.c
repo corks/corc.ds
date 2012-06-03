@@ -1,29 +1,29 @@
 #include "list.h"
 
-List *
-list_create(void)
+CaerusList *
+libcaerus_list_create(void)
 {
-    List *l;
+    CaerusList *l;
 
-    if ((l = malloc(sizeof(List))) == NULL)
+    if ((l = malloc(sizeof(CaerusList))) == NULL)
         return NULL;
 
     return l;
 }
 
 void
-list_destroy(List *l)
+libcaerus_list_destroy(CaerusList *l)
 {
     free(l->elements);
     free(l);
 }
 
 bool
-list_append(List *l, void *entity)
+libcaerus_list_append(CaerusList *l, void *entity)
 {
-    ListElement *le;
+    CaerusListElement *le;
 
-    if ((le = malloc(sizeof(ListElement))) == NULL)
+    if ((le = malloc(sizeof(CaerusListElement))) == NULL)
         return false;
 
     le->index = (l->size + 1);
@@ -31,19 +31,19 @@ list_append(List *l, void *entity)
 }
 
 void
-list_prepend(List *l, void *entity)
+libcaerus_list_prepend(CaerusList *l, void *entity)
 { }
 
-ListElement *
-list_head(List *l)
+CaerusListElement *
+libcaerus_list_head(CaerusList *l)
 {
     return l->elements[0];
 }
 
 ListElement *
-list_tail(List *l)
+libcaerus_list_tail(CaerusList *l)
 { }
 
 bool
-list_empty(List *l)
+libcaerus_list_empty(CaerusList *l)
 { }

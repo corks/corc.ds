@@ -4,15 +4,15 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-typedef struct Stack
+typedef struct CaerusStack
 {
     int top, size;
     void **content;
-} Stack;
+} CaerusStack;
 
-Stack *stack_create(const int size);
-void stack_destroy(Stack *s);
-bool stack_push(Stack *s, void *entity);
-void *stack_pop(Stack *s); 
+CaerusStack *libcaerus_stack_create(const int size);
+void libcaerus_stack_destroy(CaerusStack *s);
+bool libcaerus_stack_push(CaerusStack *s, void *entity);
+void *libcaerus_stack_pop(CaerusStack *s); 
 
 #endif

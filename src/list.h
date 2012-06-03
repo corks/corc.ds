@@ -3,24 +3,24 @@
 
 #include <stdbool.h>
 
-typedef struct ListElement
+typedef struct CaerusListElement
 {
     int index;
     void *data;
-} ListElement;
+} CaerusListElement;
 
-typedef struct List
+typedef struct CaerusList
 {
     int size;
-    ListElement **elements;
-} List;
+    CaerusListElement **elements;
+} CaerusList;
 
-List *list_create(void);
-void list_destroy(List *l);
-void list_append(List *l, void *entity);
-void list_prepend(List *l, void *entity);
-ListElement *list_head(List *l);
-ListElement *list_tail(List *l);
-bool list_empty(List *l);
+CaerusList *libcaerus_list_create(void);
+void libcaerus_list_destroy(CaerusList *l);
+void libcaerus_list_append(CaerusList *l, void *entity);
+void libcaerus_list_prepend(CaerusList *l, void *entity);
+CaerusListElement *libcaerus_list_head(CaerusList *l);
+CaerusListElement *libcaerus_list_tail(CaerusList *l);
+bool libcaerus_list_empty(CaerusList *l);
 
 #endif
