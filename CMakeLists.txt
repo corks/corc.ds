@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.8)
-project(libcaerus C)
+project(cork.ds C)
 
 set(CMAKE_BUILD_TYPE Debug)
 

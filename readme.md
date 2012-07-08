@@ -1,5 +1,5 @@
-libcaerus -- A data structure library written in C.
-===================================================
+cork.ds -- A data structure library written in C.
+=================================================
 
 This software library is open source but copyrighted; refer to the license.txt
 file for more information.

@@ -1,18 +1,18 @@
-#ifndef LIBCAERUS_STACK_H
-#define LIBCAERUS_STACK_H
+#ifndef CORK_DS_STACK_H
+#define CORK_DS_STACK_H
 
 #include <stdlib.h>
 #include <stdbool.h>
 
-typedef struct CaerusStack
+typedef struct CorkStack
 {
     int top, size;
     void **content;
-} CaerusStack;
+} CorkStack;
 
-CaerusStack *libcaerus_stack_create(const int size);
-void libcaerus_stack_destroy(CaerusStack *s);
-bool libcaerus_stack_push(CaerusStack *s, void *entity);
-void *libcaerus_stack_pop(CaerusStack *s); 
+CorkStack corkstack_create(const int size);
+void corkstack_destroy(CorkStack *s);
+bool corkstack_push(CorkStack *s, void *entity);
+void *corkstack_pop(CorkStack *s); 
 
 #endif
