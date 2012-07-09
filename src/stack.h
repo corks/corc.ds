@@ -12,7 +12,7 @@ typedef struct CorkStack
 
 CorkStack corkstack_create(const int size);
 void corkstack_destroy(CorkStack s);
+void *corkstack_pop(CorkStack s);
 bool corkstack_push(CorkStack s, void *entity);
-void *corkstack_pop(CorkStack s); 
 
 #endif
