@@ -1,26 +1,27 @@
 #ifndef LIBCAERUS_LIST_H
 #define LIBCAERUS_LIST_H
 
+#include <stdlib.h>
 #include <stdbool.h>
 
-typedef struct CaerusListElement
+typedef struct CorkListElement
 {
     int index;
     void *data;
-} CaerusListElement;
+} CorkListElement;
 
-typedef struct CaerusList
+typedef struct CorkList
 {
     int size;
-    CaerusListElement **elements;
-} CaerusList;
+    CorkListElement **elements;
+} CorkList;
 
-CaerusList *libcaerus_list_create(void);
-void libcaerus_list_destroy(CaerusList *l);
-void libcaerus_list_append(CaerusList *l, void *entity);
-void libcaerus_list_prepend(CaerusList *l, void *entity);
-CaerusListElement *libcaerus_list_head(CaerusList *l);
-CaerusListElement *libcaerus_list_tail(CaerusList *l);
-bool libcaerus_list_empty(CaerusList *l);
+CorkList *corklist_create(void);
+void corklist_destroy(CorkList *l);
+void corklist_prepend(CorkList *l, void *entity);
+CorkListElement *corklist_head(CorkList *l);
+CorkListElement *corklist_tail(CorkList *l);
+bool corklist_append(CorkList *l, void *entity);
+bool corklist_empty(CorkList *l);
 
 #endif

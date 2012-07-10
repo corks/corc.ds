@@ -1,29 +1,29 @@
 #include "list.h"
 
-CaerusList *
-libcaerus_list_create(void)
+CorkList *
+corklist_create(void)
 {
-    CaerusList *l;
+    CorkList *l;
 
-    if ((l = malloc(sizeof(CaerusList))) == NULL)
+    if ((l = malloc(sizeof(CorkList))) == NULL)
         return NULL;
 
     return l;
 }
 
 void
-libcaerus_list_destroy(CaerusList *l)
+corklist_destroy(CorkList *l)
 {
     free(l->elements);
     free(l);
 }
 
 bool
-libcaerus_list_append(CaerusList *l, void *entity)
+corklist_append(CorkList *l, void *entity)
 {
-    CaerusListElement *le;
+    CorkListElement *le;
 
-    if ((le = malloc(sizeof(CaerusListElement))) == NULL)
+    if ((le = malloc(sizeof(CorkListElement))) == NULL)
         return false;
 
     le->index = (l->size + 1);
@@ -31,21 +31,21 @@ libcaerus_list_append(CaerusList *l, void *entity)
 }
 
 void
-libcaerus_list_prepend(CaerusList *l, void *entity)
+corklist_prepend(CorkList *l, void *entity)
 { }
 
-CaerusListElement *
-libcaerus_list_head(CaerusList *l)
+CorkListElement *
+corklist_head(CorkList *l)
 {
     return l->elements[0];
 }
 
-ListElement *
-libcaerus_list_tail(CaerusList *l)
+CorkListElement *
+corklist_tail(CorkList *l)
 { }
 
 bool
-libcaerus_list_empty(CaerusList *l)
+corklist_empty(CorkList *l)
 {
     return (l->size == 0);
 }
