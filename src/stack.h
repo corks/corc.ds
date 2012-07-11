@@ -4,15 +4,15 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-typedef struct CorkStack
+typedef struct YnysStack
 {
     int top, size;
     void **content;
-} CorkStack;
+} YnysStack;
 
-CorkStack *corkstack_create(const int size);
-void corkstack_destroy(CorkStack *s);
-void *corkstack_pop(CorkStack *s);
-bool corkstack_push(CorkStack *s, void *entity);
+YnysStack *ynys_stack_create(const int size);
+void ynys_stack_destroy(YnysStack *s);
+void *ynys_stack_pop(YnysStack *s);
+bool ynys_stack_push(YnysStack *s, void *entity);
 
 #endif

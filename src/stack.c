@@ -1,14 +1,14 @@
 #include "stack.h"
 
-CorkStack *
-corkstack_create(const int size)
+YnysStack *
+ynys_stack_create(const int size)
 {
-    CorkStack *s;
+    YnysStack *s;
 
     if ((size <= 0) || (size > 66356))
         return NULL;
 
-    if ((s = malloc(sizeof(CorkStack))) == NULL)
+    if ((s = malloc(sizeof(YnysStack))) == NULL)
         return NULL;
 
     if ((s->content = malloc(sizeof(*s->content) * size)) == NULL)
@@ -21,20 +21,20 @@ corkstack_create(const int size)
 }
 
 void
-corkstack_destroy(CorkStack *s)
+ynys_stack_destroy(YnysStack *s)
 {
     free(s->content);
     free(s);
 }
 
 bool
-corkstack_empty(CorkStack *s)
+ynys_stack_empty(YnysStack *s)
 {
     return (s->top == 0);
 }
 
 bool
-corkstack_push(CorkStack *s, void *entity)
+ynys_stack_push(YnysStack *s, void *entity)
 {
     if (s->top == s->size)
         return false;
@@ -44,7 +44,7 @@ corkstack_push(CorkStack *s, void *entity)
 }
 
 void *
-corkstack_pop(CorkStack *s)
+ynys_stack_pop(YnysStack *s)
 {
     if (s->top == 0)
         return NULL;

@@ -1,27 +1,27 @@
-#ifndef LIBCAERUS_LIST_H
-#define LIBCAERUS_LIST_H
+#ifndef YNYS_DS_LIST_H
+#define YNYS_DS_LIST_H
 
 #include <stdlib.h>
 #include <stdbool.h>
 
-typedef struct CorkListElement
+typedef struct YnysListElement
 {
     int index;
     void *data;
-} CorkListElement;
+} YnysListElement;
 
-typedef struct CorkList
+typedef struct YnysList
 {
     int size;
-    CorkListElement **elements;
-} CorkList;
+    YnysListElement **elements;
+} YnysList;
 
-CorkList *corklist_create(void);
-void corklist_destroy(CorkList *l);
-void corklist_prepend(CorkList *l, void *entity);
-CorkListElement *corklist_head(CorkList *l);
-CorkListElement *corklist_tail(CorkList *l);
-bool corklist_append(CorkList *l, void *entity);
-bool corklist_empty(CorkList *l);
+YnysList *ynyslist_create(void);
+void ynyslist_destroy(YnysList *l);
+void ynyslist_prepend(YnysList *l, void *entity);
+YnysListElement *ynyslist_head(YnysList *l);
+YnysListElement *ynyslist_tail(YnysList *l);
+bool ynyslist_append(YnysList *l, void *entity);
+bool ynyslist_empty(YnysList *l);
 
 #endif
