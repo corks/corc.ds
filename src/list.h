@@ -1,27 +1,27 @@
-#ifndef YNYS_DS_LIST_H
-#define YNYS_DS_LIST_H
+#ifndef CORC_DS_LIST_H
+#define CORC_DS_LIST_H
 
 #include <stdlib.h>
 #include <stdbool.h>
 
-typedef struct YnysListElement
+typedef struct CorcListElement
 {
     int index;
     void *data;
-} YnysListElement;
+} CorcListElement;
 
-typedef struct YnysList
+typedef struct CorcList
 {
     int size;
-    YnysListElement **elements;
-} YnysList;
+    CorcListElement **elements;
+} CorcList;
 
-YnysList *ynyslist_create(void);
-void ynyslist_destroy(YnysList *l);
-void ynyslist_prepend(YnysList *l, void *entity);
-YnysListElement *ynyslist_head(YnysList *l);
-YnysListElement *ynyslist_tail(YnysList *l);
-bool ynyslist_append(YnysList *l, void *entity);
-bool ynyslist_empty(YnysList *l);
+CorcList *corclist_create(void);
+void corclist_destroy(CorcList *l);
+void corclist_prepend(CorcList *l, void *entity);
+CorcListElement *corclist_head(CorcList *l);
+CorcListElement *corclist_tail(CorcList *l);
+bool corclist_append(CorcList *l, void *entity);
+bool corclist_empty(CorcList *l);
 
 #endif

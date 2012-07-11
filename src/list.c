@@ -1,29 +1,29 @@
 #include "list.h"
 
-YnysList *
-ynyslist_create(void)
+CorcList *
+corclist_create(void)
 {
-    YnysList *l;
+    CorcList *l;
 
-    if ((l = malloc(sizeof(YnysList))) == NULL)
+    if ((l = malloc(sizeof(CorcList))) == NULL)
         return NULL;
 
     return l;
 }
 
 void
-ynyslist_destroy(YnysList *l)
+corclist_destroy(CorcList *l)
 {
     free(l->elements);
     free(l);
 }
 
 bool
-ynyslist_append(YnysList *l, void *entity)
+corclist_append(CorcList *l, void *entity)
 {
-    YnysListElement *le;
+    CorcListElement *le;
 
-    if ((le = malloc(sizeof(YnysListElement))) == NULL)
+    if ((le = malloc(sizeof(CorcListElement))) == NULL)
         return false;
 
     le->index = (l->size + 1);
@@ -31,21 +31,21 @@ ynyslist_append(YnysList *l, void *entity)
 }
 
 void
-ynyslist_prepend(YnysList *l, void *entity)
+corclist_prepend(CorcList *l, void *entity)
 { }
 
-YnysListElement *
-ynyslist_head(YnysList *l)
+CorcListElement *
+corclist_head(CorcList *l)
 {
     return l->elements[0];
 }
 
-YnysListElement *
-ynyslist_tail(YnysList *l)
+CorcListElement *
+corclist_tail(CorcList *l)
 { }
 
 bool
-ynyslist_empty(YnysList *l)
+corclist_empty(CorcList *l)
 {
     return (l->size == 0);
 }
