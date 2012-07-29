@@ -1,5 +1,5 @@
-#ifndef CORK_DS_SKIP_H
-#define CORK_DS_SKIP_H
+#ifndef CORC_DS_SKIP_H
+#define CORC_DS_SKIP_H
 
 typedef struct CorkSkipListNode CorkSkipListNode;
 typedef struct CorkSkipList CorkSkipList;

@@ -1,5 +1,5 @@
-#ifndef CORK_DS_STACK_H
-#define CORK_DS_STACK_H
+#ifndef CORC_DS_STACK_H
+#define CORC_DS_STACK_H
 
 #include <stdlib.h>
 #include <stdbool.h>
