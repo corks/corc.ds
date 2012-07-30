@@ -37,12 +37,14 @@ corclist_prepend(CorcList *l, void *entity)
 CorcListElement *
 corclist_head(CorcList *l)
 {
-    return l->elements[0];
+    return l->head;
 }
 
 CorcListElement *
 corclist_tail(CorcList *l)
-{ }
+{
+    return l->tail;
+}
 
 bool
 corclist_empty(CorcList *l)
